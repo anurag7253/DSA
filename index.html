@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Lending Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Get hassle-free loans with Fintech Lending Services. Apply now for personal loans, overdrafts, and balance transfers.">
+    <meta name="keywords"
+        content="Fintech loans, personal loans, overdraft services, balance transfer, lending services">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#hero" aria-label="Go to homepage">
+                    <img src="Logo/2sYnrQJE5826V1x9F5tVBie3VIm.svg" alt="Fintech Lending Services Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#loans">Loans</a></li>
+                    <li><a href="#apply">Apply Now</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Fintech Lending Services</h1>
+                <p>We help you get the loan you need, quickly and easily.</p>
+                <video src="Asset/11.mp4" autoplay muted loop poster="Asset/video-poster.jpg"
+                    aria-label="A short video demonstrating our lending services"></video>
+                <a href="#apply" class="button">Apply Now</a>
+            </div>
+        </section>
+
+        <section id="loans" class="container">
+            <h2>Our Loan Products</h2>
+            <div class="loan-product-grid">
+                <article class="loan-product">
+                    <h3>Personal Loan</h3>
+                    <p>Get a personal loan for any purpose.</p>
+                    <a href="#" class="learn-more" aria-label="Learn more about Personal Loan">Learn More</a>
+                </article>
+                <article class="loan-product">
+                    <h3>Overdraft</h3>
+                    <p>Access extra funds with our overdraft facility.</p>
+                    <a href="#" class="learn-more" aria-label="Learn more about Overdraft">Learn More</a>
+                </article>
+                <article class="loan-product">
+                    <h3>Balance Transfer</h3>
+                    <p>Transfer your existing loan for better terms.</p>
+                    <a href="#" class="learn-more" aria-label="Learn more about Balance Transfer">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="apply" class="container">
+            <h2>Apply for a Loan</h2>
+            <h3>Main Applicant Details</h3>
+            <form id="mainForm" action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="3e3dccfb-4340-4366-8db0-7b776a69ec0f">
+
+                <h3>Main Applicant Details</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="number">Number:</label>
+                <input type="text" id="number" name="number" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="panCard">Pan Card:</label>
+                <input type="text" id="panCard" name="panCard" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="areaPinCode">Area Pin Code:</label>
+                <input type="text" id="areaPinCode" name="areaPinCode" required>
+
+                <label for="organisation">Organisation:</label>
+                <input type="text" id="organisation" name="organisation" required>
+
+                <label for="nth">Net Take Home (NTH):</label>
+                <input type="text" id="nth" name="nth" required>
+
+                <label for="applicantType">Applicant Type:</label>
+                <div class="radio-group">
+                    <input type="radio" id="individual" name="applicantType" value="individual" required> Individual
+                    <input type="radio" id="coApplicant" name="applicantType" value="coApplicant"> Co-Applicant
+                </div>
+
+                <div id="coApplicantForm" style="display: none;">
+                    <h3>Co-Applicant Details</h3>
+                    <label for="coName">Name:</label>
+                    <input type="text" id="coName" name="coName">
+
+                    <label for="coNumber">Number:</label>
+                    <input type="text" id="coNumber" name="coNumber">
+
+                    <label for="coEmail">Email:</label>
+                    <input type="email" id="coEmail" name="coEmail">
+
+                    <label for="coPanCard">Pan Card:</label>
+                    <input type="text" id="coPanCard" name="coPanCard">
+
+                    <label for="coAddress">Address:</label>
+                    <input type="text" id="coAddress" name="coAddress">
+
+                    <label for="coAreaPinCode">Area Pin Code:</label>
+                    <input type="text" id="coAreaPinCode" name="coAreaPinCode">
+
+                    <label for="coOrganisation">Organisation:</label>
+                    <input type="text" id="coOrganisation" name="coOrganisation">
+
+                    <label for="coNth">Net Take Home (NTH):</label>
+                    <input type="text" id="coNth" name="coNth">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="how-it-works" class="container">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Choose your loan type</li>
+                <li>Fill out a simple application</li>
+                <li>Get approved quickly</li>
+                <li>Receive funds directly</li>
+            </ol>
+        </section>
+
+        <section id="testimonials" class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <blockquote class="testimonial">
+                    <p>"Fast and reliable loan services. Highly recommended!"</p>
+                    <p class="testimonial-author">- John D.</p>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"Hassle-free process with great customer support."</p>
+                    <p class="testimonial-author">- Sarah L.</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="contact-us" class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="contactName">Name:</label>
+                    <input type="text" id="contactName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message:</label>
+                    <textarea id="contactMessage" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="button">Submit</button>
+                <div id="form-success" style="display: none;">Thank you for contacting us. We will get back to you soon!
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fintech Lending Services | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
