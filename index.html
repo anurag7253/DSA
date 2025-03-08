@@ -70,8 +70,8 @@
         <section id="apply" class="container">
             <h2>Apply for a Loan</h2>
             <h3>Main Applicant Details</h3>
-            <form id="mainForm" action="https://api.web3forms.com/submit" method="post">
-                <input type="hidden" name="access_key" value="3e3dccfb-4340-4366-8db0-7b776a69ec0f">
+            <form id="mainForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="a8b8c0a0-423a-4026-9d88-3e2ef16f7944">
 
                 <h3>Main Applicant Details</h3>
                 <label for="name">Name:</label>
@@ -98,7 +98,7 @@
                 <label for="nth">Net Take Home (NTH):</label>
                 <input type="text" id="nth" name="nth" required>
 
-                <label for="applicantType">Applicant Type:</label>
+                <label>Applicant Type:</label>
                 <div class="radio-group">
                     <input type="radio" id="individual" name="applicantType" value="individual" required> Individual
                     <input type="radio" id="coApplicant" name="applicantType" value="coApplicant"> Co-Applicant
@@ -130,6 +130,7 @@
                     <label for="coNth">Net Take Home (NTH):</label>
                     <input type="text" id="coNth" name="coNth">
                 </div>
+
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -160,7 +161,8 @@
 
         <section id="contact-us" class="container">
             <h2>Contact Us</h2>
-            <form action="#" method="POST" id="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a8b8c0a0-423a-4026-9d88-3e2ef16f7944">
                 <div class="form-group">
                     <label for="contactName">Name:</label>
                     <input type="text" id="contactName" name="name" required>
@@ -187,6 +189,33 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById("mainForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default submission for debugging
+
+            const formData = new FormData(this);
+
+            // Debugging: Log form data before submitting
+            console.log("Form Data:");
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Success:", data);
+                    alert("Form submitted successfully!");
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("There was an error submitting the form.");
+                });
+        });
+    </script>
 </body>
 
 </html>
