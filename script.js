@@ -35,9 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     });
 
-    // Hamburger menu toggle
-    // hamburger.addEventListener('click', function () {
-    //     navMenu.classList.toggle('active');
-    //     hamburger.classList.toggle('active');
-    // });
+
 });
+
+const mobileNav = document.querySelector(".hamburger");
+const navbar = document.querySelector(".menubar");
+
+const toggleNav = () => {
+    navbar.classList.toggle("active");
+    mobileNav.classList.toggle("hamburger-active");
+};
+mobileNav.addEventListener("click", () => toggleNav());

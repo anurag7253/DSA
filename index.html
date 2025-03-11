@@ -17,21 +17,46 @@
 
 <body>
     <header>
-        <div class="container">
+        <nav>
             <div class="logo">
-                <a href="#hero" aria-label="Go to homepage">
-                    <img src="Logo/2sYnrQJE5826V1x9F5tVBie3VIm.svg" alt="Fintech Lending Services Logo">
-                </a>
+                <!-- <img src="Logo/Business Logo .svg" alt="logo" /> -->
+                <h1>Fintech Lending Services</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#loans">Loans</a></li>
-                    <li><a href="#apply">Apply Now</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-            </nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </nav>
+        <div class="menubar">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -67,73 +92,7 @@
             </div>
         </section>
 
-        <section id="apply" class="container">
-            <h2>Apply for a Loan</h2>
-            <h3>Main Applicant Details</h3>
-            <form id="mainForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                <input type="hidden" name="access_key" value="ce374496-f8c8-493f-aefd-6b8f5654160f">
 
-                <h3>Main Applicant Details</h3>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="number">Number:</label>
-                <input type="text" id="number" name="number" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="panCard">Pan Card:</label>
-                <input type="text" id="panCard" name="panCard" required>
-
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-
-                <label for="areaPinCode">Area Pin Code:</label>
-                <input type="text" id="areaPinCode" name="areaPinCode" required>
-
-                <label for="organisation">Organisation:</label>
-                <input type="text" id="organisation" name="organisation" required>
-
-                <label for="nth">Net Take Home (NTH):</label>
-                <input type="text" id="nth" name="nth" required>
-
-                <label>Applicant Type:</label>
-                <div class="radio-group">
-                    <input type="radio" id="individual" name="applicantType" value="individual" required> Individual
-                    <input type="radio" id="coApplicant" name="applicantType" value="coApplicant"> Co-Applicant
-                </div>
-
-                <div id="coApplicantForm" style="display: none;">
-                    <h3>Co-Applicant Details</h3>
-                    <label for="coName">Name:</label>
-                    <input type="text" id="coName" name="coName">
-
-                    <label for="coNumber">Number:</label>
-                    <input type="text" id="coNumber" name="coNumber">
-
-                    <label for="coEmail">Email:</label>
-                    <input type="email" id="coEmail" name="coEmail">
-
-                    <label for="coPanCard">Pan Card:</label>
-                    <input type="text" id="coPanCard" name="coPanCard">
-
-                    <label for="coAddress">Address:</label>
-                    <input type="text" id="coAddress" name="coAddress">
-
-                    <label for="coAreaPinCode">Area Pin Code:</label>
-                    <input type="text" id="coAreaPinCode" name="coAreaPinCode">
-
-                    <label for="coOrganisation">Organisation:</label>
-                    <input type="text" id="coOrganisation" name="coOrganisation">
-
-                    <label for="coNth">Net Take Home (NTH):</label>
-                    <input type="text" id="coNth" name="coNth">
-                </div>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
 
         <section id="how-it-works" class="container">
             <h2>How It Works</h2>
@@ -161,7 +120,7 @@
 
         <section id="contact-us" class="container">
             <h2>Contact Us</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit  " method="POST">
                 <input type="hidden" name="access_key" value="ce374496-f8c8-493f-aefd-6b8f5654160f">
                 <div class="form-group">
                     <label for="contactName">Name:</label>
@@ -189,33 +148,7 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        document.getElementById("mainForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent default submission for debugging
 
-            const formData = new FormData(this);
-
-            // Debugging: Log form data before submitting
-            console.log("Form Data:");
-            for (let pair of formData.entries()) {
-                console.log(pair[0] + ": " + pair[1]);
-            }
-
-            fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log("Success:", data);
-                    alert("Form submitted successfully!");
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                    alert("There was an error submitting the form.");
-                });
-        });
-    </script>
 </body>
 
 </html>
