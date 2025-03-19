@@ -96,100 +96,76 @@ nav {
 
 
 
-nav ul {
-    list-style: none;
-    display: flex;
+
+/* Dropdown menu styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-nav ul li {
-    margin-left: 2rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color var(--transition-duration);
-}
-
-nav ul li a:hover,
-nav ul li a:focus-visible {
-    background-color: var(--light-background);
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
-/* Mobile Navigation */
-.hamburger {
-    display: none;
+.dropdown-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
-    width: 30px;
-    height: 20px;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: 5px;
 }
 
-.hamburger .line {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    transition: all var(--transition-duration) ease-in-out;
-}
-
-.hamburger-active .line:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger-active .line:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-active .line:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-.menubar {
+.dropdown-menu {
+    display: none;
     position: absolute;
-    top: 100%;
-    left: -100vw;
-    width: 100%;
+    right: 0;
     background-color: #fff;
-    transition: left var(--transition-duration) ease-in-out;
-    z-index: 999;
-    padding: 1rem;
-}
-
-.menubar.active {
-    left: 0;
-}
-
-.menubar ul {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px;
     text-align: center;
 }
 
-.menubar ul li {
-    margin: 1rem 0;
-}
-
-.menubar ul li a {
+.dropdown-menu li a {
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color var(--transition-duration);
+    color: #333;
+    display: block;
+    transition: background-color 0.3s;
 }
 
-.menubar ul li a:hover,
-.menubar ul li a:focus-visible {
-    background-color: var(--light-background);
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
 }
 
+/* Hide the menu button on larger screens */
+/* .dropdown {
+    display: none;
+} */
+
+/* Show the menu button only on small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .dropdown {
+        display: block;
+    }
+
+    /* Hide the default navigation menu on mobile */
+    nav ul {
+        display: none;
+    }
+
+    /* Show the dropdown when active */
+    .dropdown-menu.active {
+        display: block;
+    }
+}
 
 #credit-report-info {
     font-family: sans-serif;
