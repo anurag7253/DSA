@@ -1,15 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const mobileNav = document.querySelector('.hamburger');
-//     const navbar = document.querySelector('.menubar');
-
-//     const toggleNav = () => {
-//         navbar.classList.toggle('active');
-//         mobileNav.classList.toggle('hamburger-active');
-//     };
-
-//     mobileNav.addEventListener('click', toggleNav);
-// });
-
+// Header menu 
 document.addEventListener('DOMContentLoaded', () => {
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -27,15 +16,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-// map 
-function initMap() {
-    var location = { lat: -25.344, lng: 131.036 };
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: location
-    });
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
