@@ -10,8 +10,7 @@
         content="Get hassle-free loans with Fintech Lending Services. Apply now for personal loans, overdrafts, and balance transfers.">
     <meta name="keywords"
         content="Fintech loans, personal loans, overdraft services, balance transfer, lending services">
-</head>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,7 +20,6 @@
     <header>
         <nav>
             <div class="logo">
-                <!-- <img src="Logo/Business Logo .svg" alt="logo" /> -->
                 <h1>Fintech Lending Services</h1>
             </div>
             <div class="dropdown">
@@ -33,25 +31,27 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
+        </nav>
     </header>
-    <section class="hero-section">
-        <div class="hero-content">
-            <h2>Unlock Your Financial Potential</h2>
-            <p>Get quick and easy loans with Fintech Lending Services. Apply today and achieve your goals.</p>
-            <a href="#" class="apply-button">Apply Now</a>
 
+    <!-- HERO SECTION / HOME PAGE  -->
+    <section class="hero-section">
+        <div class="split left">
+            <div class="centered">
+                <img src="/assets/Revenue-bro.svg" alt="">
+            </div>
         </div>
 
-
+        <div class="split right">
+            <div class="centered">
+                <section class="loan-info">
+                    <h2>Unlock Your Financial Potential</h2>
+                    <p>Get quick and easy loans with Fintech Lending Services. Apply today and achieve your goals.</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </section>
+            </div>
+        </div>
     </section>
-
-
-
-    <!-- <section class="bc">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam eius tempore quis voluptatibus molestias eum
-            sint, autem delectus, voluptate minima aperiam facere voluptas pariatur reprehenderit, debitis provident
-            iste consequuntur accusamus?</p>
-    </section> -->
 
     <!-- credit report section  -->
 
@@ -65,8 +65,7 @@
             <li><strong>Personal Information:</strong> Your name, address, Social Security number, and date of birth.
             </li>
             <li><strong>Credit Accounts:</strong> Details of your credit cards, loans, and other credit accounts,
-                including
-                payment history.</li>
+                including payment history.</li>
             <li><strong>Public Records:</strong> Information on bankruptcies, liens, and judgments.</li>
             <li><strong>Credit Inquiries:</strong> A record of who has accessed your credit report.</li>
         </ul>
@@ -162,9 +161,9 @@
 
     <!-- CONTACT US -->
 
-    <section id="contact-us" class="container">
+    <section id="contact-us">
         <h2>Contact Us</h2>
-        <form action="https://api.web3forms.com/submit  " method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="ce374496-f8c8-493f-aefd-6b8f5654160f">
             <div class="form-group">
                 <label for="contactName">Name:</label>
@@ -182,8 +181,9 @@
             <div id="form-success" style="display: none;">Thank you for contacting us. We will get back to you soon!
             </div>
         </form>
+    </section>
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
