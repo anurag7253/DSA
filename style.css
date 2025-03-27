@@ -94,16 +94,20 @@ nav {
 
 /* HOME SECTION IMAGE BACKGROUND */
 .hero-section {
-    background-image: url('/assets/home-background.jpg');
+    background-image: url('/assets/name-moto.jpg');
     /* Replace with your image path */
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    /* Ensures full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
-    /* Adjust padding as needed */
     position: relative;
-    /* Needed for overlay */
 }
 
 .hero-section::before {
@@ -153,7 +157,13 @@ nav {
     background-color: #2980b9;
 }
 
+/* BC */
 
+.bc {
+    background-image: url(/assets/home-background.jpg);
+    height: 100vh;
+    width: 100vh;
+}
 
 /* CREDIT REPORT INFORMATION  */
 
