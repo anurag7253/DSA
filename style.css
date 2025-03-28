@@ -92,65 +92,42 @@ nav {
 
 /* Hero Section */
 .hero-section {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .split {
-    height: 100%;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    overflow-x: hidden;
-}
-
-.left {
-    left: 0;
-}
-
-.right {
-    right: 0;
 }
 
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
     text-align: center;
 }
 
-.centered img {
-    width: 100%;
-    max-width: 600px;
-    /* Increased max-width */
-    border-radius: 50%;
-}
-
 .loan-info {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    /* Increased padding */
-    border-radius: 10px;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+    padding: 50px;
+    /* More padding */
+    max-width: 700px;
+    text-align: center;
 }
 
 .loan-info h2 {
-    font-size: 2em;
-    /* Increased font size */
-    margin-bottom: 20px;
-    color: #336699;
+    font-size: 3vw;
+    /* Increased size */
 }
 
 .loan-info p {
-    font-size: 1.25em;
-    /* Increased font size */
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: 1.8vw;
+    /* Increased text size */
 }
 
 .apply-button {
@@ -171,30 +148,30 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+    }
+
     .split {
         width: 100%;
         height: auto;
     }
 
-    .centered {
-        position: static;
-        transform: none;
+    .centered img {
+        max-width: 60%;
     }
 
     .loan-info {
-        text-align: center;
         padding: 20px;
-        /* Adjusted padding for mobile */
     }
 
     .loan-info h2 {
-        font-size: 2em;
-        /* Adjusted font size for mobile */
+        font-size: 6vw;
     }
 
     .loan-info p {
-        font-size: 1em;
-        /* Adjusted font size for mobile */
+        font-size: 4vw;
     }
 
     .apply-button {
