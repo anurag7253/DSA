@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'MuseoModerno', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,6 +27,8 @@ nav {
 
 .logo h1 {
     color: #336699;
+    font-family: MuseoModerno;
+    font-size: 2em;
 }
 
 .dropdown {
