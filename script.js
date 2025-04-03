@@ -16,3 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+async function centerWithFlexbox() {
+  const parent = $0.parentElement;
+  await setElementStyles(parent, {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '1rem',
+  });
+}

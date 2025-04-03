@@ -80,6 +80,15 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .centered img {
+        margin: 20%;
+
+    }
+
     .dropdown {
         display: block;
     }
@@ -87,6 +96,7 @@ nav {
     nav ul {
         display: none;
     }
+
 
     .dropdown-menu.active {
         display: block;
@@ -101,6 +111,7 @@ nav {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    margin-bottom: 20px;
 
     background: rgb(240, 240, 240);
     background: -moz-linear-gradient(0deg, rgba(240, 240, 240, 1) 44%, rgba(0, 123, 255, 0.9831582291119573) 100%);
